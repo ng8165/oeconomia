@@ -1,0 +1,53 @@
+h1 {
+    font-size: 56px;
+}
+
+.blue-text {
+    color: #15A0CA;
+}
+
+.med-text {
+    font-size: 24px;
+}
+
+.top-title {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    height: 300px;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.content, .footer {
+    padding: 20px;
+}
+
+.content > div {
+    margin: 20px 0;
+}
+
+.bottom {
+    background-color: #28282a;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom > h2 {
+    color: white;
+}
+
+.bottom button {
+    color: #28282a;
+    padding: 16px 8px;
+    background-color: white;
+    border: 0;
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+}
