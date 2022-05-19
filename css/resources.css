@@ -1,0 +1,49 @@
+/* mailing list section */
+
+.mailing {
+    background-image: url("../img/mailing_list/mailing_1.jpeg");
+    background-position: center center;
+}
+
+.mailing > h2 {
+    color: black;
+}
+
+/* content sections */
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 20px;
+}
+
+@media screen and (max-width: 675px) {
+    .content {
+        flex-wrap: wrap;
+    }
+
+    .content-title {
+        max-width: 100% !important;
+    }
+}
+
+.content-title {
+    max-width: 40%;
+}
+
+.content-list ul li {
+    margin: 8px 0;
+}
+
+.content-list ul li a.italic {
+    font-style: italic;
+}
+
+.content-list ul li a.blue-text {
+    color: #798DBB;
+    font-weight: bold;
+}
+
+.content-list ul li a.blue-text:hover {
+    color: blue;
+}
