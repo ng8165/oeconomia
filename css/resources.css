@@ -2,6 +2,7 @@
 
 .mailing {
     background-image: url("../img/mailing_list/mailing_1.jpeg");
+    background-position: center center;
 }
 
 .mailing > h2 {
