@@ -15,7 +15,7 @@ a {
     transition: color 250ms ease-in-out;
 }
 
-a:hover {
+a:hover, a:focus-within {
     color: red;
 }
 
@@ -69,9 +69,9 @@ nav {
     margin: 0 4px;
 }
 
-.page:hover {
+.page:hover, .page:focus-within {
     background-color: lightgray;
-    color: inherit
+    color: inherit;
 }
 
 .page.current-page {
@@ -150,6 +150,6 @@ footer > a {
     text-decoration: none;
 }
 
-.mailing > a:hover {
+.mailing > a:hover, .mailing > a:focus-within {
     background-color: lightgray;
 }
