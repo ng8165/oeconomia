@@ -128,7 +128,6 @@ footer > a {
 /* mailing list */
 
 .mailing {
-    background-color: #28282a;
     height: 300px;
     padding: 20px;
     display: flex;
@@ -142,7 +141,7 @@ footer > a {
 }
 
 .mailing > a {
-    color: #28282a;
+    color: black;
     padding: 16px 8px;
     background-color: white;
     font-family: inherit;
