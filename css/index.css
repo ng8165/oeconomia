@@ -1,16 +1,6 @@
-h1 {
-    font-size: 3em;
-}
+/* title section */
 
-.blue-text {
-    color: #15A0CA;
-}
-
-.med-text {
-    font-size: 1.5em;
-}
-
-.top-title {
+.title {
     background-color: lightblue;
     display: flex;
     flex-direction: column;
@@ -18,45 +8,34 @@ h1 {
     justify-content: center;
     height: 300px;
     padding: 0 20px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-.content, .footer {
+.title > h1 {
+    font-size: 3em;
+}
+
+/* middle content section */
+
+.content {
     padding: 20px;
 }
 
 .content > div {
     margin: 20px 0;
+    font-size: 1.5em;
 }
 
 .content > :first-child {
     margin-top: 0;
 }
 
-.bottom {
+.blue-text {
+    color: #15A0CA;
+}
+
+/* mailing list section */
+
+.mailing {
     background-color: #28282a;
-    height: 300px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.bottom > h2 {
-    color: white;
-}
-
-.bottom button {
-    color: #28282a;
-    padding: 16px 8px;
-    background-color: white;
-    border: 0;
-    font-family: inherit;
-    font-size: 1.25em;
-    cursor: pointer;
-    transition: background-color 250ms ease-in-out;
-}
-
-.bottom button:hover {
-    background-color: lightgray;
 }

@@ -6,10 +6,19 @@
 }
 
 body {
-    padding: 16px 0;
     margin: 0;
     font-family: "Raleway", sans-serif;
 }
+
+a {
+    transition: color 250ms ease-in-out;
+}
+
+a:hover, a:focus-within {
+    color: red;
+}
+
+/* nav bar section */
 
 nav {
     display: flex;
@@ -17,15 +26,17 @@ nav {
     top: 0;
     height: auto;
     max-height: 100px;
-    padding: 20px 10px;
+    padding: 20px;
     background-color: white;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid black;
 }
 
 .hamburger {
     display: none;
     font-size: 28px !important;
+    color: black;
 }
 
 .logo {
@@ -38,7 +49,6 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-grow: 1;
     justify-content: flex-end;
     align-items: center;
 }
@@ -52,18 +62,14 @@ nav {
     user-select: none;
     transition: background-color 250ms ease-in-out;
     border-radius: 10px;
-}
-
-.page:hover {
-    background-color: lightgray;
-}
-
-.page > a {
     color: black;
     text-decoration: none;
+    padding: 4px;
+    margin: 0 4px;
 }
 
-.page > a:hover {
+.page:hover, .page:focus-within {
+    background-color: lightgray;
     color: inherit;
 }
 
@@ -71,16 +77,19 @@ nav {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 500px) {
     .pages {
         display: none;
         position: absolute;
         top: 80px;
         right: 10px;
         flex-direction: column;
+        align-items: stretch;
         background-color: white;
-        border: 2px solid black;
-        z-index: 100;
+        border: 3px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
     }
 
     .pages.show {
@@ -89,7 +98,9 @@ nav {
 
     .page:not(.hamburger) {
         border-radius: 0;
-        width: 100%;
+        padding: 8px;
+        margin: 0;
+        text-align: center;
     }
 
     nav > .hamburger {
@@ -97,16 +108,51 @@ nav {
     }
 }
 
+/* footer section */
+
 footer {
+    padding: 20px;
+}
+
+footer > a {
+    display: block;
+}
+
+footer > .footer-text {
     text-align: center;
     font-size: 0.75em;
-    margin: 8px 0;
+    margin-top: 16px;
 }
 
-a {
-    transition: color 250ms ease-in-out;
+footer > .small-text {
+    font-size: 1em;
 }
 
-a:hover {
-    color: red;
+/* mailing list */
+
+.mailing {
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mailing > h2 {
+    color: white;
+}
+
+.mailing > a {
+    color: black;
+    padding: 16px 8px;
+    background-color: white;
+    font-family: inherit;
+    font-size: 1.25em;
+    transition: background-color 250ms ease-in-out;
+    text-decoration: none;
+}
+
+.mailing > a:hover, .mailing > a:focus-within {
+    background-color: lightgray;
 }
