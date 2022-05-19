@@ -1,7 +1,7 @@
 /* mailing list section */
 
 .mailing {
-    background-color: lightgray;
+    background-image: url("../img/mailing_list/mailing_1.jpeg");
 }
 
 .mailing > h2 {
