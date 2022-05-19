@@ -19,6 +19,10 @@ a:hover, a:focus-within {
     color: rgb(80, 80, 80);
 }
 
+div {
+    font-size:  1em;
+}
+
 /* nav bar section */
 
 nav {
