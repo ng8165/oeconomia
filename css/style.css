@@ -76,6 +76,7 @@ nav {
 
 .page.current-page {
     text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 @media screen and (max-width: 675px) {
