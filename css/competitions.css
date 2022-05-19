@@ -1,0 +1,47 @@
+/* content */
+
+.content {
+    margin: 20px;
+}
+
+/* collapsibles */
+
+.collapsible > button {
+    border: 0;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-family: inherit;
+    font-size: 1.5em;
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.collapsible > button > .symbol {
+    user-select: none;
+    transition: transform 250ms ease-in-out;
+}
+
+.collapsible > .collapsed-content {
+    margin: 0 32px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 250ms ease-in-out;
+}
+
+.collapsible > .collapsed-content > a {
+    display: block;
+}
+
+.collapsible > .collapsed-content.open {
+    max-height: 1000px;
+    margin-bottom: 16px;
+}
+
+.collapsible > button > .symbol.open {
+    transform: rotate(180deg);
+}

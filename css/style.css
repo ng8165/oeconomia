@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 
 * {
     box-sizing: border-box;
@@ -8,6 +9,7 @@
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
+    min-width: 300px;
 }
 
 a {
@@ -40,8 +42,6 @@ nav {
 
 .hamburger {
     display: none;
-    font-size: 28px !important;
-    color: black;
 }
 
 .logo {
@@ -95,7 +95,7 @@ nav {
         border: 3px solid black;
         border-radius: 10px;
         overflow: hidden;
-        z-index: 1;
+        z-index: 1000;
     }
 
     .pages.show {
@@ -110,7 +110,9 @@ nav {
     }
 
     nav > .hamburger {
-        display: block;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
     }
 }
 
