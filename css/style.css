@@ -17,6 +17,13 @@ a {
     color: black;
 }
 
+amogus {
+    color: white;
+    font-size: 3em;
+    font-weight: 500px;
+    background-image:<img src = "/img/gradient-gif.gif">;
+}
+
 a:hover, a:focus-within {
     color: rgb(80, 80, 80);
 }

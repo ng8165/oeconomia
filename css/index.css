@@ -1,6 +1,9 @@
 /* title section */
 
 .title {
+    /* background-image:  url('http://i.stack.imgur.com/kx8MT.gif');*/
+    background-image:  url('../img/gradient-gif.gif');
+    background-size: 0.1px;
     background-color: lightblue;
     display: flex;
     flex-direction: column;
@@ -11,6 +14,11 @@
     margin-bottom: 20px;
 }
 
+amogus {
+    color: white;
+    font-size: 3em;
+    font-weight: 500px;
+}
 .title > h1 {
     font-size: 3em;
 }
