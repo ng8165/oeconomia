@@ -28,7 +28,10 @@
 }
 
 .content-title {
-    max-width: 40%;
+    flex-shrink: 0;
+    text-align: left;
+    width: 40%;
+    style = position:relative;
 }
 
 .content-list ul li {
