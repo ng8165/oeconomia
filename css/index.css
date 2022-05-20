@@ -1,26 +1,21 @@
 /* title section */
 
 .title {
-    /* background-image:  url('http://i.stack.imgur.com/kx8MT.gif');*/
-    background-image:  url('../img/gradient-gif.gif');
-    background-size: 0.1px;
+    background-image: url('../img/gradient.gif');
     background-color: lightblue;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     justify-content: center;
     height: 300px;
     padding: 0 20px;
     margin-bottom: 20px;
 }
 
-amogus {
-    color: white;
+.title > div {
+    color: black;
     font-size: 3em;
-    font-weight: 500px;
-}
-.title > h1 {
-    font-size: 3em;
+    font-weight: normal;
 }
 
 /* middle content section */
