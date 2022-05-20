@@ -30,8 +30,8 @@
 .content-title {
     flex-shrink: 0;
     text-align: left;
-    max-width: 50%;
     width: 40%;
+    style = position:relative;
 }
 
 .content-list ul li {
