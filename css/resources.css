@@ -19,19 +19,19 @@
 
 @media screen and (max-width: 675px) {
     .content {
-        flex-wrap: wrap;
+        display: block;
     }
 
     .content-title {
-        max-width: 100% !important;
+        width: 100% !important;
+        margin-right: 0;
     }
 }
 
 .content-title {
     flex-shrink: 0;
-    text-align: left;
     width: 40%;
-    style = position:relative;
+    margin-right: 8px;
 }
 
 .content-list ul li {
