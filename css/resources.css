@@ -28,7 +28,9 @@
 }
 
 .content-title {
-    max-width: 40%;
+    text-align: left;
+    max-width: 50%;
+    padding-right: 60px;
 }
 
 .content-list ul li {
