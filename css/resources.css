@@ -30,7 +30,7 @@
 .content-title {
     text-align: left;
     max-width: 50%;
-    padding-right: 60px;
+    float: left;
 }
 
 .content-list ul li {
