@@ -6,11 +6,17 @@
 
 /* collapsibles */
 
+.content > .collapsible:first-of-type {
+    border-top: 1px solid black;
+}
+
+.collapsible {
+    border-bottom: 1px solid black;
+}
+
 .collapsible > button {
     border: 0;
     background-color: white;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     font-family: inherit;
     font-size: 1.5em;
     padding: 8px;
@@ -19,9 +25,12 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    color: black;
+    text-align: left;
 }
 
 .collapsible > button > .symbol {
+    margin-left: 8px;
     user-select: none;
     transition: transform 250ms ease-in-out;
 }
@@ -30,7 +39,11 @@
     margin: 0 32px;
     max-height: 0;
     overflow: hidden;
-    transition: all 250ms ease-in-out;
+    transition: max-height 250ms ease-in-out;
+}
+
+.collapsible > .collapsed-content > :last-child {
+    margin-bottom: 20px;
 }
 
 .collapsible > .collapsed-content > a {
@@ -39,7 +52,6 @@
 
 .collapsible > .collapsed-content.open {
     max-height: 1000px;
-    margin-bottom: 16px;
 }
 
 .collapsible > button > .symbol.open {
