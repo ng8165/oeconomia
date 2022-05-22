@@ -18,7 +18,7 @@ a {
 }
 
 a:hover, a:focus-within {
-    color: rgb(80, 80, 80);
+    color: gray;
 }
 
 div {
