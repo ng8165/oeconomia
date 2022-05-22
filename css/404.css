@@ -1,0 +1,30 @@
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content > h1 {
+    font-size: 4em;
+    margin: 16px 0;
+}
+
+.content > a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 16px 0;
+    transition: background-color 250ms ease-in-out;
+    text-decoration: none;
+}
+
+.content > a:hover {
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+
+.content > div {
+    text-align: center;
+    margin: 4px 0;
+}
