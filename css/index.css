@@ -1,18 +1,21 @@
 /* title section */
 
 .title {
+    background-image: url('../img/gradient.gif');
     background-color: lightblue;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     justify-content: center;
     height: 300px;
     padding: 0 20px;
     margin-bottom: 20px;
 }
 
-.title > h1 {
+.title > div {
+    color: black;
     font-size: 3em;
+    font-weight: normal;
 }
 
 /* middle content section */
@@ -31,7 +34,7 @@
 }
 
 .blue-text {
-    color: #15A0CA;
+    color: #1663be;
 }
 
 /* mailing list section */
