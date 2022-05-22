@@ -1,0 +1,64 @@
+/* speaker carousel section */
+
+.carousel {
+    margin: 20px;
+}
+
+.swiper {
+    height: auto;
+    width: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2em;
+    background-color: lightgray;
+    padding: 20px;
+    height: auto !important;
+}
+
+.swiper-slide div, .swiper-slide li {
+    font-size: 0.5em;
+}
+
+.swiper-slide h3 {
+    font-size: 1em;
+}
+
+.swiper-slide > * {
+    margin: 10px 0;
+}
+
+.swiper-slide img {
+    width: 50%;
+    height: auto;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: black !important;
+}
+
+/* mailing list section */
+
+.mailing {
+    background-image: url(../img/mailing_list/mailing_2.jpeg);
+    background-position: center center;
+}
+
+/* title section */
+
+.title {
+    background-image: linear-gradient(lightgray, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    padding: 0 20px;
+}
+
+.title > h1 {
+    font-size: 3em;
+}
