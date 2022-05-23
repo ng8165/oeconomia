@@ -24,8 +24,14 @@
     font-size: 0.5em;
 }
 
+.swiper-slide div {
+    width: 100%;
+    text-align: left;
+}
+
 .swiper-slide h3 {
     font-size: 1em;
+    text-align: center;
 }
 
 .swiper-slide > * {
