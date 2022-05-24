@@ -1,0 +1,64 @@
+/* image gallery section */
+
+.top {
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    padding: 20px;
+}
+
+.top a {
+    width: 30%;
+    margin: 8px;
+}
+
+.top img {
+    width: 100%;
+    height: auto;
+}
+
+/* content section */
+
+.middle > h2 {
+    margin: 40px 0 0 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content > div {
+    margin: 20px;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 675px) {
+    .content {
+        display: block;
+    }
+
+    .content > div {
+        max-width: 100%;
+    }
+}
+
+.content > .description > div {
+    margin: 8px 0;
+}
+
+/* collapsible section (within content) */
+
+.collapsible, .collapsible:first-of-type {
+    border-color: gray;
+}
+
+.collapsed-content {
+    padding-left: 8px;
+}
+
+.collapsed-content > div {
+    margin: 10px 0;
+}
