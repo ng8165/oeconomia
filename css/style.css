@@ -207,10 +207,10 @@ footer > .small-text {
     display: block;
 }
 
-.collapsible > .collapsed-content.open {
+.collapsible.open .collapsed-content {
     max-height: 1000px;
 }
 
-.collapsible > button > .symbol.open {
+.collapsible.open > button > .symbol {
     transform: rotate(180deg);
 }
