@@ -198,14 +198,9 @@ footer > .small-text {
 }
 
 .collapsible > .collapsed-content {
-    margin: 0 32px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 250ms ease-in-out;
-}
-
-.collapsible > .collapsed-content > :last-child {
-    margin-bottom: 20px;
 }
 
 .collapsible > .collapsed-content > a {
