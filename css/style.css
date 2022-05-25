@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: "Raleway", sans-serif;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 a {
@@ -209,6 +209,7 @@ footer > .small-text {
 
 .collapsible.open .collapsed-content {
     max-height: 1000px;
+    overflow: scroll;
 }
 
 .collapsible.open > button > .symbol {
