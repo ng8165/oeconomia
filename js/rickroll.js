@@ -32,21 +32,20 @@ function onPlayerReady(event) {
     event.target.playVideo();
 }
 
-let tryWithAudio = false;
+let tried = false;
 function onPlayerStateChange(event) {
-    alert(event.data);
-    // try playing with audio first
-    if (!tryWithAudio) {
+    if (!tried) {
         player.playVideo();
-        tryWithAudio = true;
-        alert("try autoplay with audio");
-    }
+        
+        if (event.data !== YT.PlayerState.PLAYING) {
+            player.mute();
+            player.playVideo();
 
-    // if does not succeed (try variable is true and not playing)
-    // then mute and try to play
-    if (tryWithAudio && event.data !== YT.PlayerState.PLAYING) {
-        player.mute();
-        player.playVideo();
-        alert("try muted autoplay");
+            if (event.data !== YT.PlayerState.PLAYING) {
+                alert("i guess ur immune. good job.");
+            }
+        }
+
+        tried = true;
     }
 }
