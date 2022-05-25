@@ -18,8 +18,10 @@ function onYouTubeIframeAPIReady() {
             "loop": 1,
             "disablekb": 1,
             "modestbranding": 1,
+            "origin": "https://oeconomia.netlify.app",
             "playlist": "dQw4w9WgXcQ",
-            "playsinline": 1
+            "playsinline": 1,
+            "rel": 0
         },
         events: {
             "onReady": onPlayerReady,
@@ -29,7 +31,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-    event.target.playVideo();
+    onPlayerStateChange(event);
 }
 
 let tried = 0; // 0 = not tried, 1 = autoplay, 2 = muted autoplay, 3 = fail
@@ -55,7 +57,7 @@ function onPlayerStateChange(event) {
                 alert("good job, ur immune");
                 tried = 3;
             } else {
-                alert("muted")
+                alert("muted");
             }
         }
     }

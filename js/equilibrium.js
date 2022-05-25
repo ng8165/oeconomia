@@ -12,6 +12,7 @@ title.addEventListener("click", function() {
     // create iframe for rickroll.html and append to body
     const iframe = document.createElement("iframe");
     iframe.src = "rickroll.html";
+    iframe.allow = "autoplay";
     body.innerHTML = "";
     body.appendChild(iframe);
 
