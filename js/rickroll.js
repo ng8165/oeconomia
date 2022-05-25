@@ -37,9 +37,12 @@ function onPlayerReady(event) {
 let tried = 0; // 0 = not tried, 1 = autoplay, 2 = muted autoplay, 3 = fail
 let finalized = false;
 function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.BUFFERING)
+        return;
+    
     if (!finalized) {
         alert(event.data);
-        
+
         if (tried === 0) {
             player.playVideo();
             tried = 1;
