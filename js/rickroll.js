@@ -61,8 +61,9 @@ function onPlayerStateChange(event) {
                 console.log("muted");
             } else {
                 finalized = true;
-                alert("good job, ur immune");
+                confirm("good job, ur immune");
                 tried = 3;
+                document.getElementById("overlay").remove();
             }
         }
     }
