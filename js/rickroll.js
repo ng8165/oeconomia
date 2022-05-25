@@ -29,11 +29,12 @@ function onYouTubeIframeAPIReady() {
 
 let tryWithAudio = false;
 function onPlayerStateChange(event) {
+    alert(event.data);
     // try playing with audio first
     if (!tryWithAudio) {
         player.playVideo();
         tryWithAudio = true;
-        console.log("try autoplay with audio");
+        alert("try autoplay with audio");
     }
 
     // if does not succeed (try variable is true and not playing)
@@ -41,6 +42,6 @@ function onPlayerStateChange(event) {
     if (tryWithAudio && event.data !== YT.PlayerState.PLAYING) {
         player.mute();
         player.playVideo();
-        console.log("try muted autoplay");
+        alert("try muted autoplay");
     }
 }
