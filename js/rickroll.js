@@ -38,6 +38,8 @@ let tried = 0; // 0 = not tried, 1 = autoplay, 2 = muted autoplay, 3 = fail
 let finalized = false;
 function onPlayerStateChange(event) {
     if (!finalized) {
+        alert(event.data);
+        
         if (tried === 0) {
             player.playVideo();
             tried = 1;
@@ -51,13 +53,13 @@ function onPlayerStateChange(event) {
                 tried = 2;
             }
         } else if (tried === 2) {
-            finalized = true;
-
-            if (event.data !== YT.PlayerState.PLAYING) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                finalized = true;
+                alert("muted");
+            } else {
+                finalized = true;
                 alert("good job, ur immune");
                 tried = 3;
-            } else {
-                alert("muted");
             }
         }
     }
