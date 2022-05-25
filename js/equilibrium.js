@@ -8,7 +8,7 @@ title.addEventListener("click", function() {
         alert(msg[i]);
     
     // parameters: https://developers.google.com/youtube/player_parameters#Parameters
-    const url = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&playlist=dQw4w9WgXcQ&loop=1&disablekb=1&playsinline=1&iv_load_policy=3";
+    const url = "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&playlist=dQw4w9WgXcQ&loop=1&disablekb=1&playsinline=1&iv_load_policy=3&mute=1";
     
     // create iframe
     const iframe = document.createElement("iframe");
