@@ -41,7 +41,7 @@ function onPlayerStateChange(event) {
         return;
     
     if (!finalized) {
-        alert(event.data);
+        console.log(event.data);
 
         if (tried === 0) {
             player.playVideo();
@@ -49,7 +49,7 @@ function onPlayerStateChange(event) {
         } else if (tried === 1) {
             if (event.data === YT.PlayerState.PLAYING) {
                 finalized = true;
-                alert("autoplay");
+                console.log("autoplay");
             } else {
                 player.mute();
                 player.playVideo();
@@ -58,7 +58,7 @@ function onPlayerStateChange(event) {
         } else if (tried === 2) {
             if (event.data === YT.PlayerState.PLAYING) {
                 finalized = true;
-                alert("muted");
+                console.log("muted");
             } else {
                 finalized = true;
                 alert("good job, ur immune");
