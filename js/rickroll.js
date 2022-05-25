@@ -22,9 +22,14 @@ function onYouTubeIframeAPIReady() {
             "playsinline": 1
         },
         events: {
+            "onReady": onPlayerReady,
             "onStateChange": onPlayerStateChange
         }
     });
+}
+
+function onPlayerReady(event) {
+    event.target.playVideo();
 }
 
 let tryWithAudio = false;
