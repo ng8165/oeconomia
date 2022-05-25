@@ -6,7 +6,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
+let player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("player", {
         videoId: "dQw4w9WgXcQ",
@@ -32,24 +32,31 @@ function onPlayerReady(event) {
     event.target.playVideo();
 }
 
-let tried = false;
+let tried = 0; // 0 = not tried, 1 = autoplay, 2 = muted autoplay, 3 = fail
+let finalized = false;
 function onPlayerStateChange(event) {
-    if (!tried) {
-        player.playVideo();
-        
-        if (event.data !== YT.PlayerState.PLAYING) {
-            player.mute();
+    if (!finalized) {
+        if (tried === 0) {
             player.playVideo();
+            tried = 1;
+        } else if (tried === 1) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                finalized = true;
+                alert("autoplay");
+            } else {
+                player.mute();
+                player.playVideo();
+                tried = 2;
+            }
+        } else if (tried === 2) {
+            finalized = true;
 
             if (event.data !== YT.PlayerState.PLAYING) {
-                alert("i guess ur immune. good job.");
+                alert("good job, ur immune");
+                tried = 3;
             } else {
-                alert("mobile: muted autoplay");
+                alert("muted")
             }
-        } else {
-            alert("autoplay works");
         }
-
-        tried = true;
     }
 }
