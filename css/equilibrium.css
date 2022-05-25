@@ -66,3 +66,14 @@
 .collapsed-content > div {
     margin: 10px 0;
 }
+
+/* easter egg */
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    height: 100vh;
+    width: 100vw;
+    border: 0;
+}

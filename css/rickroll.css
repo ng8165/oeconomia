@@ -1,0 +1,27 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+div {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+iframe {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100vh !important;
+    aspect-ratio: 16/9;
+    border: 0;
+}
