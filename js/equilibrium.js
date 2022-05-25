@@ -7,12 +7,7 @@ title.addEventListener("click", function() {
     for (let i=1; i<msg.length; i++)
         alert(msg[i]);
 
-    // css
-    const css = document.createElement("style");
-    css.innerHTML = `
-        
-    `;
-    document.body.append(css);
+    // url parameters: https://developers.google.com/youtube/player_parameters#Parameters
 
     document.body.innerHTML = `
         <style>
@@ -36,16 +31,14 @@ title.addEventListener("click", function() {
                 z-index: 100;
             }
 
-            video {
+            iframe {
                 width: 100%;
                 max-height: 100vh;
                 aspect-ratio: 16 / 9;
                 border: 0;
             }
         </style>
-        <div title="lol you can't stop rick"></div>
-        <video playsinline autoplay muted loop>
-            <source src="img/rickroll.mp4" type="video/mp4">
-        </video>
+        <div title="lol u can't stop rick"></div>
+        <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&playlist=dQw4w9WgXcQ&loop=1&disablekb=1&playsinline=1&iv_load_policy=3" allow="autoplay"></iframe>
     `;
 });
