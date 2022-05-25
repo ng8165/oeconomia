@@ -43,7 +43,11 @@ function onPlayerStateChange(event) {
 
             if (event.data !== YT.PlayerState.PLAYING) {
                 alert("i guess ur immune. good job.");
+            } else {
+                alert("mobile: muted autoplay");
             }
+        } else {
+            alert("autoplay works");
         }
 
         tried = true;
