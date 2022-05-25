@@ -6,7 +6,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 const firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
+let player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("player", {
         videoId: "dQw4w9WgXcQ",
@@ -18,29 +18,53 @@ function onYouTubeIframeAPIReady() {
             "loop": 1,
             "disablekb": 1,
             "modestbranding": 1,
+            "origin": "https://oeconomia.netlify.app",
             "playlist": "dQw4w9WgXcQ",
-            "playsinline": 1
+            "playsinline": 1,
+            "rel": 0
         },
         events: {
+            "onReady": onPlayerReady,
             "onStateChange": onPlayerStateChange
         }
     });
 }
 
-let tryWithAudio = false;
-function onPlayerStateChange(event) {
-    // try playing with audio first
-    if (!tryWithAudio) {
-        player.playVideo();
-        tryWithAudio = true;
-        console.log("try autoplay with audio");
-    }
+function onPlayerReady(event) {
+    onPlayerStateChange(event);
+}
 
-    // if does not succeed (try variable is true and not playing)
-    // then mute and try to play
-    if (tryWithAudio && event.data !== YT.PlayerState.PLAYING) {
-        player.mute();
-        player.playVideo();
-        console.log("try muted autoplay");
+let tried = 0; // 0 = not tried, 1 = autoplay, 2 = muted autoplay, 3 = fail
+let finalized = false;
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.BUFFERING)
+        return;
+    
+    if (!finalized) {
+        console.log(event.data);
+
+        if (tried === 0) {
+            player.playVideo();
+            tried = 1;
+        } else if (tried === 1) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                finalized = true;
+                console.log("autoplay");
+            } else {
+                player.mute();
+                player.playVideo();
+                tried = 2;
+            }
+        } else if (tried === 2) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                finalized = true;
+                console.log("muted");
+            } else {
+                finalized = true;
+                confirm("good job, ur immune");
+                tried = 3;
+                document.getElementById("overlay").remove();
+            }
+        }
     }
 }
