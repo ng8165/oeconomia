@@ -17,8 +17,6 @@ function onYouTubeIframeAPIReady() {
             "iv_load_policy": 3,
             "loop": 1,
             "disablekb": 1,
-            "modestbranding": 1,
-            "origin": "https://oeconomia.netlify.app",
             "playlist": "dQw4w9WgXcQ",
             "playsinline": 1,
             "rel": 0
@@ -61,9 +59,10 @@ function onPlayerStateChange(event) {
                 console.log("muted");
             } else {
                 finalized = true;
-                confirm("good job, ur immune");
+                alert("good job, ur immune");
                 tried = 3;
                 document.getElementById("overlay").remove();
+                player.unMute();
             }
         }
     }

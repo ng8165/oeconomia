@@ -1,4 +1,4 @@
-const msg = ["dont click ok", "you failed", "now u have to click", "thru all of this", "*sighs* :("];
+const msg = ["dont click ok", "you failed (plz don't suppress alerts)", "now u have to click", "thru all of this", "*sighs* :("];
 const title = document.getElementById("title");
 const body = document.body;
 const favicon = document.querySelector("link[rel='shortcut icon']");
