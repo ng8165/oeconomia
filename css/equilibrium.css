@@ -49,6 +49,10 @@
     margin: 8px 0;
 }
 
+.title {
+    cursor: pointer;
+}
+
 /* collapsible section (within content) */
 
 .collapsible, .collapsible:first-of-type {
