@@ -14,7 +14,7 @@ title.addEventListener("click", function() {
     const iframe = document.createElement("iframe");
     iframe.src = url;
     iframe.style = "width: 100%; max-height: 100vh; aspect-ratio: 16 / 9; border: 0;";
-    iframe.allow = "autoplay";
+    iframe.allow = "autoplay; encrypted-media";
     
     // create overlay over the video so you can't click it
     const overlay = document.createElement("div");
