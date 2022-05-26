@@ -13,7 +13,6 @@ function onYouTubeIframeAPIReady() {
         playerVars: {
             // https://developers.google.com/youtube/player_parameters#Parameters
             "autoplay": 1, // autoplay
-            "controls": 0, // no controls
             "iv_load_policy": 3, // no annotations
             "loop": 1, // loop
             "playlist": "dQw4w9WgXcQ", // loop
