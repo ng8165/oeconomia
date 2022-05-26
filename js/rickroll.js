@@ -12,18 +12,18 @@ function onYouTubeIframeAPIReady() {
         videoId: "dQw4w9WgXcQ",
         playerVars: {
             // https://developers.google.com/youtube/player_parameters#Parameters
-            "autoplay": 1,
-            "controls": 0,
-            "iv_load_policy": 3,
-            "loop": 1,
-            "disablekb": 1,
-            "playlist": "dQw4w9WgXcQ",
-            "playsinline": 1,
-            "rel": 0
+            "autoplay": 1, // autoplay
+            "controls": 0, // no controls
+            "iv_load_policy": 3, // no annotations
+            "loop": 1, // loop
+            "playlist": "dQw4w9WgXcQ", // loop
+            "disablekb": 1, // disable keyboard events
+            "playsinline": 1, // plays inline on mobile (not fullscreen)
+            "rel": 0, // only related videos from channel
         },
         events: {
             "onReady": onPlayerReady,
-            "onStateChange": onPlayerStateChange
+            "onStateChange": onPlayerStateChange,
         }
     });
 }
@@ -39,8 +39,6 @@ function onPlayerStateChange(event) {
         return;
     
     if (!finalized) {
-        console.log(event.data);
-
         if (tried === 0) {
             player.playVideo();
             tried = 1;
