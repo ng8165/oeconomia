@@ -39,6 +39,7 @@ function onPlayerStateChange(event) {
     
     if (!finalized) {
         if (tried === 0) {
+            player.setVolume(100);
             player.playVideo();
             tried = 1;
         } else if (tried === 1) {
@@ -56,9 +57,9 @@ function onPlayerStateChange(event) {
                 console.log("muted");
             } else {
                 finalized = true;
-                alert("good job, ur immune");
                 tried = 3;
                 document.getElementById("overlay").remove();
+                player.setVolume(100);
                 player.unMute();
             }
         }
