@@ -12,6 +12,7 @@
 .top a {
     width: 30%;
     margin: 8px;
+    max-width: 500px;
 }
 
 .top img {
