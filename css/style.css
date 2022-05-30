@@ -127,14 +127,10 @@ footer > a {
     display: block;
 }
 
-footer > .footer-text {
+footer .footer-text {
     text-align: center;
     font-size: 0.75em;
     margin-top: 16px;
-}
-
-footer > .small-text {
-    font-size: 1em;
 }
 
 /* mailing list */
