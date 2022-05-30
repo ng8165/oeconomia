@@ -49,6 +49,10 @@
     margin: 8px 0;
 }
 
+.content > .collapsibles {
+    flex-grow: 1;
+}
+
 .title {
     cursor: pointer;
 }
