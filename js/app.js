@@ -8,8 +8,21 @@ hamburger.addEventListener("click", function() {
 
 for (let i=0; i<collapsibles.length; i++) {
     const button = collapsibles[i].children[0];
-    button.addEventListener("click", function() {
-        const collapsible = this.parentElement;
-        collapsible.classList.toggle("open")
-    });
+
+    // set all links so that you can't tab through them
+    const links = collapsibles[i].querySelectorAll("a");
+    for (let j=0; j<links.length; j++)
+        links[j].tabIndex = -1;
+    
+    button.addEventListener("click", toggleCollapsible);
+}
+
+function toggleCollapsible() {
+    const collapsible = this.parentElement;
+    collapsible.classList.toggle("open");
+
+    // set links so that you can tab through them
+    const links = collapsible.querySelectorAll("a");
+    for (let i=0; i<links.length; i++)
+        links[i].tabIndex = -1-links[i].tabIndex;
 }
