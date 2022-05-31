@@ -1,9 +1,11 @@
-const hamburger = document.getElementById("hamburger")
+const hamburger = document.getElementById("hamburger");
+const hamburgerSymbol = hamburger.querySelector(".material-symbols-outlined");
 const navPages = document.getElementById("pages");
 const collapsibles = document.querySelectorAll(".collapsible");
 
 hamburger.addEventListener("click", function() {
     navPages.classList.toggle("show");
+    hamburgerSymbol.innerHTML = hamburgerSymbol.innerHTML === "menu" ? "close" : "menu";
 });
 
 for (let i=0; i<collapsibles.length; i++) {
