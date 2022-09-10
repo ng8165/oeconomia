@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+}
+
+/* nav bar */
+
+.navbar {
+    z-index: 5000;
+}
+
+.offcanvas {
+    z-index: 8000;
+}
+
+.navbrand-subtitle {
+    font-size: 0.75em;
+}
+
+/* links */
+
+a {
+    color: black;
+    transition: color 250ms ease-in-out;
+}
+
+a:hover {
+    color: gray;
+}
+
+.eq-txt {
+    color: #798DBB;
+    font-weight: 700;
+}
+
+.eq-txt:hover {
+    color: blue;
+}
+
+/* equilibrium */
+
+.eq-img {
+    width: 100%;
+    height: auto;
+}
+
+.eq-title {
+    cursor: pointer;
+}
+
+/* speakers */
+
+.speaker-slide {
+    height: auto !important;
+}
+
+.speaker-card {
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.speaker-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-img {
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: black !important;
+}
