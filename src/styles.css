@@ -29,6 +29,14 @@ a:hover {
     color: gray;
 }
 
+.text-muted a {
+    color: inherit;
+}
+
+.text-muted a:hover {
+    color: black;
+}
+
 .eq-txt {
     color: #798DBB;
     font-weight: 700;

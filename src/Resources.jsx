@@ -44,7 +44,7 @@ function Resources() {
 
                         <h3>Magazines:</h3>
                         <ul>
-                            <li>Check out Harker's very own <Link italic url="equilibrium.html" className="eq-txt">Equilibrium</Link>!</li>
+                            <li>Check out Harker's very own <Link italic url="equilibrium" className="eq-txt">Equilibrium</Link>!</li>
                             <li><Link url="https://www.bloomberg.com/businessweek">Bloomberg Businessweek</Link></li>
                             <li><Link url="https://tickertape.tdameritrade.com/trading/thinkmoney">thinkMoney Magazine</Link></li>
                         </ul>
@@ -65,7 +65,7 @@ function Resources() {
                 </HalfView>
             </Container>
 
-            <Mailing color="blanchedalmond"/>
+            <Mailing color="burlywood"/>
 
             <Footer />
         </>

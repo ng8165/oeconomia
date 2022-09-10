@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import HalfView from "./components/HalfView";
 import Link from "./components/Link";
 import Section from "./components/Section";
+import Mailing from "./components/Mailing";
 import { Accordion, OverlayTrigger, Tooltip, Row, Col } from "react-bootstrap";
 import eq1 from "./img/cover_art/Issue_1_Cover.png";
 import eq2 from "./img/cover_art/Issue_2_Cover.png";
@@ -17,7 +18,7 @@ function Equilibrium() {
             content: [
                 "Editor in Chief: Catherine He ’22",
                 "Managing Editors: Nicole Tian ’22, Reagan Ka ’22, Sonya He ’23, Claire Luo ’24, Desiree Luo ’24",
-                "Copy Editors: Ryan Change ’23, Caden Lin ’22, April Sun ’22, Yejin Song ’22",
+                "Copy Editors: Ryan Chang ’23, Caden Lin ’22, April Sun ’22, Yejin Song ’22",
                 "186 pages, 38 articles, 30 contributors"
             ]
         },
@@ -80,7 +81,7 @@ function Equilibrium() {
                             <h2 className="mb-3 d-inline-block eq-title" onClick={() => {window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")}}>Equilibrium</h2>
                         </OverlayTrigger>
                         <div>Equilibrium is the student-run economics magazine of Harker’s upper school, encompassing student interpretations of modern issues and personal experiences through an economic lens.</div>
-                        <div>Feel the urge to submit an article? Guidelines can be found <Link href="https://docs.google.com/document/d/1o7t12k8eDIjbf3NfGSn1Qns2S9Bx7Nr5raZve1_b5Z0/edit?usp=sharing">here</Link>.</div>
+                        <div>Feel the urge to submit an article? Submissions for 2022-23 will open soon, so sign up for our mailing list and be on the lookout for any emails!</div>
                     </div>
 
                     <Accordion>
@@ -96,6 +97,9 @@ function Equilibrium() {
                         })}
                     </Accordion>
                 </HalfView>
+
+                <Mailing color="indigo" textColor="white" />
+
             <Footer />
         </>
     );
