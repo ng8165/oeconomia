@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Link from "./components/Link";
+import Mailing from "./components/Mailing";
 import Accordion from "react-bootstrap/Accordion";
 
 function Competitions() {
@@ -63,7 +64,7 @@ function Competitions() {
 
     function createAccordion(name, arr) {
         return (
-            <div className="p-3">
+            <div className="p-3 mb-3">
                 <h2 className="mb-3">{name}</h2>
                 <Accordion>
                     {arr.map((a, index) => {
@@ -93,6 +94,7 @@ function Competitions() {
             <Header />
             {createAccordion("Challenge Competitions:", competitions)}
             {createAccordion("Essay Competitions:", essay)}
+            <Mailing className="mt-3" />
             <Footer />
         </>
     );

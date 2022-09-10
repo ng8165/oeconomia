@@ -65,7 +65,7 @@ function Resources() {
                 </HalfView>
             </Container>
 
-            <Mailing color="burlywood"/>
+            <Mailing />
 
             <Footer />
         </>

@@ -98,7 +98,7 @@ function Equilibrium() {
                     </Accordion>
                 </HalfView>
 
-                <Mailing color="indigo" textColor="white" />
+                <Mailing />
 
             <Footer />
         </>

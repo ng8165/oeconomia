@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 
 function HalfView(props) {
     return (
-        <Row className={"my-3 " + props.className}>
+        <Row className={"my-3 " + props.className || ""}>
             <Col md="6">{props.children[0]}</Col>
             <Col md="6">{props.children[1]}</Col>
         </Row>

@@ -113,7 +113,7 @@ function Speakers() {
                 })}
             </Swiper>
 
-            <Mailing color="darkslategray" textColor="white" />
+            <Mailing />
             
             <Footer />
         </>
