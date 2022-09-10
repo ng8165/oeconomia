@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "react-bootstrap/nav";
-import Navbar from "react-bootstrap/navbar";
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 function Header() {
