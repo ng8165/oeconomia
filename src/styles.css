@@ -40,6 +40,7 @@ a:hover {
 .eq-txt {
     color: #798DBB;
     font-weight: 700;
+    font-style: italic;
 }
 
 .eq-txt:hover {
