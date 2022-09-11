@@ -81,7 +81,7 @@ function Equilibrium() {
                             <h2 className="mb-3 d-inline-block eq-title" onClick={() => {window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")}}>Equilibrium</h2>
                         </OverlayTrigger>
                         <div>Equilibrium is the student-run economics magazine of Harker’s upper school, encompassing student interpretations of modern issues and personal experiences through an economic lens.</div>
-                        <div className="mt-3">Feel the urge to submit an article? Equilibrium submissions for 2022-23 will open soon, so be on the lookout for any emails by signing up for our mailing list!</div>
+                        <div className="mt-3">Feel the urge to submit an article? Equilibrium submissions for 2022-23 open soon, so be on the lookout for any emails by signing up for our mailing list!</div>
                     </div>
 
                     <Accordion>

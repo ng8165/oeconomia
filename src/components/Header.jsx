@@ -6,9 +6,13 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 function Header() {
     return (
         <Navbar bg="light" expand="lg" className="p-3 sticky-top border-bottom border-secondary">
-            <Navbar.Brand href="/" className="py-0">
-                <div className="h4 mb-0">Oeconomia Economics Society</div>
+            <Navbar.Brand href="/" className="py-0 d-none d-sm-block">
+                <h4 className="mb-0">Oeconomia Economics Society</h4>
                 <div className="navbrand-subtitle text-muted">Harker's Student Run Economics Organization</div>
+            </Navbar.Brand>
+
+            <Navbar.Brand href="/" className="py-0 d-block d-sm-none">
+                <h4 className="mb-0">Oeconomia</h4>
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="navbar"/>
