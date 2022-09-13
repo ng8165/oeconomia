@@ -1,7 +1,7 @@
 import Section from "../components/Section";
 import Link from "../components/Link";
 import Mailing from "../components/Mailing";
-import Head from "next/Head";
+import Head from "next/head";
 import Card from "react-bootstrap/Card";
 
 import { Navigation } from "swiper";

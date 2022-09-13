@@ -3,7 +3,7 @@ import Section from "../components/Section";
 import Mailing from "../components/Mailing";
 import { Accordion, OverlayTrigger, Tooltip, Row, Col } from "react-bootstrap";
 import React from "react";
-import Head from "next/Head";
+import Head from "next/head";
 
 export default function Equilibrium() {
     const equilibrium = [

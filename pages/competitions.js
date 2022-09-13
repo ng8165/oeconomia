@@ -1,6 +1,6 @@
 import Link from "../components/Link";
 import Accordion from "react-bootstrap/Accordion";
-import Head from "next/Head";
+import Head from "next/head";
 
 export default function Competitions() {
     const competitions = [

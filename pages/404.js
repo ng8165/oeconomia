@@ -1,5 +1,5 @@
-import Link from "next/Link";
-import Head from "next/Head";
+import Link from "next/link";
+import Head from "next/head";
 import Button from "react-bootstrap/Button"
 
 export default function Error404() {

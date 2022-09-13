@@ -1,7 +1,7 @@
 import Mailing from "../components/Mailing";
 import Link from "../components/Link"
-import Head from "next/Head";
-import NextLink from "next/Link";
+import Head from "next/head";
+import NextLink from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Resources() {

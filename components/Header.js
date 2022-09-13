@@ -1,5 +1,5 @@
 import { Button, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import Link from "next/Link";
+import Link from "next/link";
 import { useState } from "react";
 
 function Header() {
