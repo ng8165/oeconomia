@@ -1,11 +1,8 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Link from "./components/Link";
-import Mailing from "./components/Mailing";
+import Link from "../components/Link";
 import Accordion from "react-bootstrap/Accordion";
+import Head from "next/Head";
 
-function Competitions() {
+export default function Competitions() {
     const competitions = [
         {
             title: "National Economics Challenge",
@@ -64,40 +61,39 @@ function Competitions() {
 
     function createAccordion(name, arr) {
         return (
-            <div className="p-3 mb-3">
-                <h2 className="mb-3">{name}</h2>
-                <Accordion>
-                    {arr.map((a, index) => {
-                        return (
-                            <Accordion.Item eventKey={index} key={index}>
-                                <Accordion.Header>{a.title}</Accordion.Header>
-                                <Accordion.Body>
-                                    {a.sections.map((section, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <h4 className="my-2">{section.name}</h4>
-                                                <>{section.content}</>
-                                            </div>
-                                        );
-                                    })}
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        );
-                    })}
-                </Accordion>
-            </div>
+            <>
+                <Head><title>Competitions | Oeconomia Economics Society</title></Head>
+
+                <div className="p-3 mb-3">
+                    <h2 className="mb-3">{name}</h2>
+                    <Accordion>
+                        {arr.map((a, index) => {
+                            return (
+                                <Accordion.Item eventKey={index} key={index}>
+                                    <Accordion.Header>{a.title}</Accordion.Header>
+                                    <Accordion.Body>
+                                        {a.sections.map((section, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <h4 className="my-2">{section.name}</h4>
+                                                    <>{section.content}</>
+                                                </div>
+                                            );
+                                        })}
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            );
+                        })}
+                    </Accordion>
+                </div>
+            </>
         );
     }
 
     return (
         <>
-            <Header />
             {createAccordion("Challenge Competitions:", competitions)}
             {createAccordion("Essay Competitions:", essay)}
-            <Mailing className="mt-3" />
-            <Footer />
         </>
     );
 }
-
-export default Competitions;

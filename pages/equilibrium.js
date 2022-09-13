@@ -1,17 +1,11 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HalfView from "./components/HalfView";
-import Link from "./components/Link";
-import Section from "./components/Section";
-import Mailing from "./components/Mailing";
+import Link from "../components/Link";
+import Section from "../components/Section";
+import Mailing from "../components/Mailing";
 import { Accordion, OverlayTrigger, Tooltip, Row, Col } from "react-bootstrap";
-import eq1 from "./img/cover_art/Issue_1_Cover.png";
-import eq2 from "./img/cover_art/Issue_2_Cover.png";
-import eq3 from "./img/cover_art/Issue_3_Cover.png";
-import eq4 from "./img/cover_art/Issue_4_Cover.png";
+import React from "react";
+import Head from "next/Head";
 
-function Equilibrium() {
+export default function Equilibrium() {
     const equilibrium = [
         {
             title: "Equilibrium Issue 4, 2022",
@@ -51,15 +45,19 @@ function Equilibrium() {
     ];
 
     const images = [
-        { img: eq4, name: "Equilibrium Issue 4, 2022", url: "https://issuu.com/theharkerschool/docs/harker_equilibrium_summer2022"},
-        { img: eq3, name: "Equilibrium Issue 3, 2021", url: "https://issuu.com/theharkerschool/docs/equilibrium3_summer2021_v6"},
-        { img: eq2, name: "Equilibrium Issue 2, 2020", url: "https://issuu.com/theharkerschool/docs/equilibrium_issue2__election_2020_mini-edition_"},
-        { img: eq1, name: "Equilibrium Issue 1, 2019", url: "https://issuu.com/theharkerschool/docs/equilibrium__2019-2020_"}
+        { img: "Issue_4_Cover", name: "Equilibrium Issue 4, 2022", url: "https://issuu.com/theharkerschool/docs/harker_equilibrium_summer2022"},
+        { img: "Issue_3_Cover", name: "Equilibrium Issue 3, 2021", url: "https://issuu.com/theharkerschool/docs/equilibrium3_summer2021_v6"},
+        { img: "Issue_2_Cover", name: "Equilibrium Issue 2, 2020", url: "https://issuu.com/theharkerschool/docs/equilibrium_issue2__election_2020_mini-edition_"},
+        { img: "Issue_1_Cover", name: "Equilibrium Issue 1, 2019", url: "https://issuu.com/theharkerschool/docs/equilibrium__2019-2020_"}
     ];
 
     return (
         <>
-            <Header />
+            <Head>
+                <meta name="description" content="Equilibrium is the student-run economics magazine of Harker’s upper school, encompassing student interpretations of modern issues and personal experiences through an economic lens." />
+                <title>Equilibrium | Oeconomia Economics Society</title>
+            </Head>
+
             <Section color="#333333">
                 <Row>
                     {images.map((image, index) => {
@@ -67,7 +65,12 @@ function Equilibrium() {
                             <Col lg="3" md="4" sm="6" className="py-3" key={index}>
                                 <Link url={image.url}>
                                     <OverlayTrigger placement="top" overlay={<Tooltip>{image.name}</Tooltip>}>
-                                        <img src={image.img} alt={image.name} className="eq-img" />
+                                        {({ ref, ...triggerHandler }) => (
+                                            <picture {...triggerHandler}>
+                                                <source srcSet={`/img/cover_art/${image.img}.png`} type="image/png" />
+                                                <img ref={ref} className="eq-img" src={`/img/cover_art/${image.img}.png`} alt={image.name} width="612" height="792" />
+                                            </picture>
+                                        )}
                                     </OverlayTrigger>
                                 </Link>
                             </Col>
@@ -75,7 +78,9 @@ function Equilibrium() {
                     })}
                 </Row>
             </Section>
-                <HalfView className="p-3">
+
+            <Row className="my-3 p-3">
+                <Col md="6">
                     <div className="mb-3">
                         <OverlayTrigger placement="top" overlay={<Tooltip>Click to learn more!</Tooltip>}>
                             <h2 className="mb-3 d-inline-block eq-title" onClick={() => {window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")}}>Equilibrium</h2>
@@ -83,7 +88,8 @@ function Equilibrium() {
                         <div>Equilibrium is the student-run economics magazine of Harker’s upper school, encompassing student interpretations of modern issues and personal experiences through an economic lens.</div>
                         <div className="mt-3">Feel the urge to submit an article? Equilibrium submissions for 2022-23 open soon, so be on the lookout for any emails by signing up for our mailing list!</div>
                     </div>
-
+                </Col>
+                <Col md="6">
                     <Accordion>
                         {equilibrium.map((magazine, index) => {
                             return (
@@ -96,13 +102,10 @@ function Equilibrium() {
                             );
                         })}
                     </Accordion>
-                </HalfView>
+                </Col>
+            </Row>
 
-                <Mailing />
-
-            <Footer />
+            <Mailing />
         </>
     );
 }
-
-export default Equilibrium;

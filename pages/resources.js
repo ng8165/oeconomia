@@ -1,20 +1,21 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HalfView from "./components/HalfView";
-import Mailing from "./components/Mailing";
-import Link from "./components/Link";
-import Container from "react-bootstrap/Container";
+import Mailing from "../components/Mailing";
+import Link from "../components/Link"
+import Head from "next/Head";
+import NextLink from "next/Link";
+import { Container, Row, Col } from "react-bootstrap";
 
-function Resources() {
+export default function Resources() {
     return (
         <>
-            <Header />
-
+            <Head><title>Resources | Oeconomia Economics Society</title></Head>
+            
             <Container fluid className="p-3">
-                <HalfView>
-                    <h3>Studying for the National Economics Competition (NEC):</h3>
-                    <>
+                <Row className="my-3">
+                    <Col md="6">
+                        <h3>Studying for the National Economics Competition (NEC):</h3>
+                    </Col>
+                    
+                    <Col md="6">
                         <h4>Helpful Documents</h4>
                         <ul>
                             <li><Link url="https://www.councilforeconed.org/archived-tests/">Sample Tests</Link></li>
@@ -27,12 +28,15 @@ function Resources() {
                             <li><Link url="https://www.investopedia.com/">Investopedia Articles</Link></li>
                             <li><Link url="https://www.investopedia.com/articles/07/economists.asp">10 Influential Economists</Link></li>
                         </ul>
-                    </>
-                </HalfView>
+                    </Col>
+                </Row>
 
-                <HalfView>
-                    <h3>Additional Resources:</h3>
-                    <>
+                <Row className="my-3">
+                    <Col md="6">
+                        <h3>Additional Resources:</h3>
+                    </Col>
+                    
+                    <Col md="6">
                         <h3>Books:</h3>
                         <ul>
                             <li><Link italic url="https://www.amazon.com/Scorecasting-Hidden-Influences-Behind-Sports/dp/0307591808">Scorecasting</Link> by Tobias Moskowitz and Jon Wertheim</li>
@@ -44,7 +48,7 @@ function Resources() {
 
                         <h3>Magazines:</h3>
                         <ul>
-                            <li>Check out Harker's very own <a href="/equilibrium" className="eq-txt">Equilibrium</a>!</li>
+                            <li>Check out Harker&apos;s very own <NextLink href="/equilibrium"><a className="eq-txt">Equilibrium</a></NextLink>!</li>
                             <li><Link url="https://www.bloomberg.com/businessweek">Bloomberg Businessweek</Link></li>
                             <li><Link url="https://tickertape.tdameritrade.com/trading/thinkmoney">thinkMoney Magazine</Link></li>
                         </ul>
@@ -61,15 +65,11 @@ function Resources() {
                             </ul>
                             <li><Link url="https://www.marketplace.org/">Marketplace</Link></li>
                         </ul>
-                    </>
-                </HalfView>
+                    </Col>
+                </Row>
             </Container>
 
             <Mailing />
-
-            <Footer />
         </>
     );
 }
-
-export default Resources;
