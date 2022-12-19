@@ -82,9 +82,7 @@ export default function Equilibrium() {
             <Row className="my-3 p-3">
                 <Col md="6">
                     <div className="mb-3">
-                        <OverlayTrigger placement="top" overlay={<Tooltip>Click to learn more!</Tooltip>}>
-                            <h2 className="mb-3 d-inline-block eq-title" onClick={() => {window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank")}}>Equilibrium</h2>
-                        </OverlayTrigger>
+                    <h2 className="mb-3 d-inline-block">Equilibrium</h2>
                         <div>Equilibrium is the student-run economics magazine of Harker’s upper school, encompassing student interpretations of modern issues and personal experiences through an economic lens.</div>
                         <div className="mt-3">Feel the urge to submit an article? Equilibrium submissions for 2022-23 open soon, so be on the lookout for any emails by signing up for our mailing list!</div>
                     </div>
